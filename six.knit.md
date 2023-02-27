@@ -1,9 +1,12 @@
 ---
 title: "My Report for Assignment 6"
 author: "Eve Hallock"
-date: "`r format(Sys.time(), '%d %B %Y')`"
-output: pdf_document
+date: "26 February 2023"
+output:
+  pdf_document:
+    df_print: paged
 documentclass: report
+fontsize: 11pt
 geometry:
 - top=1.5in
 - bottom=1.5in
@@ -11,8 +14,9 @@ geometry:
 - right=1in
 header-includes: \usepackage{fancyhdr}
 linestretch: 1.5
-fontsize: 11pt
-toc: TRUE
+csl: ecology.csl
+bibliography: references.bib
+toc: yes
 toc-depth: 3
 ---
 
@@ -89,11 +93,7 @@ Eu, leo praesent potenti egestas consequat enim arcu a rutrum. Aliquam platea et
 
 \vspace{0.5in}
 
-```{r random_walk, echo = FALSE, fig.cap = "Time series of observed values."}
-set.seed(497)
-xx <- cumsum(rnorm(30))
-plot.ts(xx, ylab = expression(italic(y[t])), las = 1)
-```
+![Time series of observed values.](six_files/figure-latex/random_walk-1.pdf) 
 
 Magnis eu parturient et, in, massa purus. Natoque non, habitant bibendum at lorem tincidunt libero sollicitudin. Nunc donec phasellus maximus eget tellus. Et taciti senectus aliquam facilisi justo. Sit sapien nibh sem ridiculus eget eu sit. Hendrerit aliquam sed. Venenatis lobortis ac amet natoque facilisis luctus gravida lobortis. Aliquam in libero in. Et sociis dis curabitur vitae senectus nibh dignissim semper neque eu ex conubia. Dolor elit ac eget donec ut egestas eu in cum amet sit, id.
 
@@ -101,9 +101,7 @@ Nec placerat aliquam sed sed litora, lacus mauris, pellentesque nulla. Ac sodale
 
 \vspace{0.5in}
 
-```{r rw_diff, echo=FALSE, fig.cap = "Time series of the first differences of the observed values."}
-plot.ts(diff(xx), ylab = expression(paste(nabla, italic(y[t]))), las = 1)
-```
+![Time series of the first differences of the observed values.](six_files/figure-latex/rw_diff-1.pdf) 
 
 Sollicitudin aliquet ante gravida curabitur, elementum. Vel in aptent neque, cubilia pellentesque arcu fames maximus, habitasse, hendrerit. Donec magna interdum sagittis odio sem. Tortor mauris luctus laoreet bibendum ullamcorper dapibus et, magnis eget sociis. Tincidunt sed eleifend nostra nec sollicitudin, mollis tellus leo mollis ridiculus. Bibendum leo at, et penatibus maecenas pellentesque sed viverra, dui volutpat. Sit cursus eleifend duis. Nec maecenas duis. Metus ut quis justo augue eleifend dui porttitor viverra mi vitae arcu risus. Id efficitur lorem vivamus vel ac purus tempus proin? Malesuada et potenti, lectus donec finibus quam quisque? Lorem nisl leo purus vitae nunc primis velit, faucibus hendrerit, pulvinar. Adipiscing sit risus curae, malesuada, lorem odio eu lacus sociosqu curabitur, dictum. Tellus a venenatis mi suscipit. Donec mattis nec tortor, conubia sapien pharetra. Dis pellentesque aptent pharetra tempus suspendisse.
 
@@ -111,11 +109,11 @@ Sed pulvinar lobortis sapien lacus porttitor. At nisl orci, molestie elementum. 
 
 # Discusssion
 
-Molestie erat himenaeos purus, sit. In mollis cursus velit, cursus fames leo cursus vel, nisl rhoncus blandit. Tempus iaculis sed nec faucibus aliquet nisl sed pretium posuere. Ut felis euismod, dapibus, mattis metus cras ullamcorper odio. Gravida sapien, vulputate sit orci turpis nulla. Metus suspendisse platea lectus dolor adipiscing venenatis tortor? Morbi vestibulum enim phasellus et ornare lobortis nostra quam cum, ullamcorper. Sodales, ut, lorem justo facilisi nostra in 
+Molestie erat himenaeos purus, sit. In mollis cursus velit, cursus fames leo cursus vel, nisl rhoncus blandit. Tempus iaculis sed nec faucibus aliquet nisl sed pretium posuere. Ut felis euismod, dapibus, mattis metus cras ullamcorper odio. Gravida sapien, vulputate sit orci turpis nulla. Metus suspendisse platea lectus dolor adipiscing venenatis tortor? Morbi vestibulum enim phasellus et ornare lobortis nostra quam cum, ullamcorper. Sodales, ut, lorem justo facilisi nostra in @broman_data_2018
 
 Ipsum malesuada odio nulla varius ut erat. Fermentum nam per ullamcorper tempus ac. Pellentesque, aliquam, diam morbi in, in nisi. Non, maximus sed in aliquam, elementum quis tincidunt. Leo eget consequat dapibus proin augue sollicitudin. Sodales porta nec morbi congue enim. Eget auctor sed, leo venenatis. In est tincidunt nullam. Pellentesque, auctor nulla efficitur tristique blandit. Quam faucibus mattis tempus, eleifend sed a nisl mi nunc vivamus. Augue suspendisse sed auctor eu tempor justo maecenas vestibulum habitant maecenas sed. In sed, sed augue, ligula euismod, ad congue ad velit in, tincidunt. Dictum nec turpis sed senectus, non, donec potenti magna in conubia blandit. Congue sed pulvinar sed ligula ultrices malesuada ultrices id venenatis, vestibulum sed.
 
-Purus, ac at pellentesque sem cum fusce platea. Nec purus tempus integer sociosqu mi erat felis hac turpis. Rhoncus tristique eu. Diam himenaeos montes ut, cursus feugiat, eget eget ac. Dignissim sit egestas, nec praesent nec eleifend in viverra et quis faucibus, felis ut. Tincidunt quis proin dolor lacinia ut duis leo. Elit sed, non velit vitae tortor `<add citation "(Marwick et al. 2018)" here; URL is https://peerj.com/preprints/3192v2>`.
+Purus, ac at pellentesque sem cum fusce platea. Nec purus tempus integer sociosqu mi erat felis hac turpis. Rhoncus tristique eu. Diam himenaeos montes ut, cursus feugiat, eget eget ac. Dignissim sit egestas, nec praesent nec eleifend in viverra et quis faucibus, felis ut. Tincidunt quis proin dolor lacinia ut duis leo. Elit sed, non velit vitae tortor @marwick_packaging_2018
 
 Tristique, at et tempus, pellentesque conubia et nisl etiam orci nam. Dictum ipsum volutpat eget nunc! A orci eget scelerisque, laoreet. Nec faucibus urna lacus in bibendum. Dolor nam ultricies et ut mi duis nec. Vivamus odio quis sit magnis sed maecenas nibh fusce porttitor dignissim. Malesuada donec quis aliquam arcu blandit felis luctus integer. Quam sed purus ac neque sem lacinia ac, sed. Ac luctus phasellus justo tempor. Facilisi non. Hendrerit, ut augue, vel aliquam arcu et sed natoque in, ipsum fermentum. Et nostra quisque.
 
@@ -127,5 +125,3 @@ Maecenas molestie pellentesque felis mauris nisl viverra sapien, in inceptos imp
 
 # References
 
-`<Insert automatically formatted bibliography here>`
-write.bibtex(file = "references.bib")
