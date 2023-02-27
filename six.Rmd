@@ -2,9 +2,7 @@
 title: "My Report for Assignment 6"
 author: "Eve Hallock"
 date: "`r format(Sys.time(), '%d %B %Y')`"
-output:
-  pdf_document:
-    df_print: paged
+output: pdf_document
 documentclass: report
 fontsize: 11pt
 geometry:
